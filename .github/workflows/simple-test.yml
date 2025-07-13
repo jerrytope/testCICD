@@ -12,15 +12,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # ✅ TEMP DEBUG: Save and test SSH key manually
     - name: Debug: Test SSH manually
       run: |
         mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/github_key
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/github_key
         chmod 600 ~/.ssh/github_key
         ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_key ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} "echo ✅ SSH manual test successful"
 
-    # ✅ Actual Deployment
     - name: Deploy via appleboy SSH action
       uses: appleboy/ssh-action@v1.0.0
       with:
