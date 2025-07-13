@@ -20,5 +20,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           echo "✅ Connected to server"
-          cd /home/ubuntu/myproject  # change this to your project path
+          cd /home/ubuntu  # change this to your project path
           git pull origin master     # update the code
