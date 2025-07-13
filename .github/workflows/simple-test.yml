@@ -2,7 +2,7 @@ name: Deploy to Ubuntu Server
 
 on:
   push:
-    branches: [ master ]  # or main, if you're using main branch
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -20,5 +20,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           echo "✅ Connected to server"
-          cd /home/ubuntu  # change this to your project path
-          git pull origin master     # update the code
+          cd /home/ubuntu/tests
+          git pull origin master
