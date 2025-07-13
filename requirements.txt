@@ -3,7 +3,7 @@ requests>=2.31.0
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
 
-# Azure and OpenAI
+# Azure and OpenAI i just add this sha oo
 openai>=1.0.0
 azure-storage-blob>=12.19.0
 azure-core>=1.29.0
