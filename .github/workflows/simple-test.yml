@@ -18,6 +18,7 @@ jobs:
         host: ${{ secrets.DEPLOY_HOST }}
         username: ${{ secrets.DEPLOY_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
+        debug: true  # Add this line
         script: |
           echo "✅ Connected to server"
           cd /home/ubuntu/tests
