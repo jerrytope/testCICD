@@ -21,5 +21,5 @@ jobs:
         debug: true  # Add this line
         script: |
           echo "✅ Connected to server"
-          cd /home/ubuntu/tests
+          cd /home/ubuntu/testCICD
           git pull origin master
