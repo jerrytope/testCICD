@@ -12,23 +12,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # ✅ Debug SSH manually before deploying
-    - name: Debug: Manual SSH test
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/github_key
-        chmod 600 ~/.ssh/github_key
-        ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_key ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} "echo ✅ Manual SSH test successful"
-
-    # ✅ Actual deploy using SSH action
-    - name: Deploy via SSH
+    - name: Deploy to Server via SSH
       uses: appleboy/ssh-action@v1.0.0
       with:
-        host: ${{ secrets.DEPLOY_HOST }}
-        username: ${{ secrets.DEPLOY_USER }}
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        debug: true
+        debug: true  # Add this line
         script: |
           echo "✅ Connected to server"
           cd /home/ubuntu/tests
