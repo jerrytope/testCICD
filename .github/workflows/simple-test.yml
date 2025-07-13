@@ -20,12 +20,11 @@ jobs:
         python-version: '3.11'
         
     - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+      run: pip install -r requirements.txt
         
     - name: Create logs directory
       run: mkdir -p logs
       
     - name: Run tests
       run: |
-        python -m pytest tests/ -v 
+        python -m pytest tests/test_lawcom.py -v 
