@@ -1,3 +1,6 @@
 2025-07-13 15:12:39,871 - scraping.lawcom - ERROR - Error getting project links from https://www.lawcom.gov.uk/current-projects/: object of type 'Mock' has no len()
 2025-07-13 15:12:39,934 - scraping.lawcom - ERROR - Error getting project links from https://www.lawcom.gov.uk/current-projects/: Connection timeout
 2025-07-13 15:12:39,950 - scraping.lawcom - ERROR - Error getting project links from https://www.lawcom.gov.uk/current-projects/: object of type 'Mock' has no len()
+2025-07-13 15:25:07,551 - scraping.lawcom - ERROR - Error getting project links from https://www.lawcom.gov.uk/current-projects/: object of type 'Mock' has no len()
+2025-07-13 15:25:07,598 - scraping.lawcom - ERROR - Error getting project links from https://www.lawcom.gov.uk/current-projects/: Connection timeout
+2025-07-13 15:25:07,614 - scraping.lawcom - ERROR - Error getting project links from https://www.lawcom.gov.uk/current-projects/: object of type 'Mock' has no len()
